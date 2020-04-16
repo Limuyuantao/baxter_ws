@@ -1,0 +1,8 @@
+ <launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>     
+  <include file="$(find baxter_variations)/baxter_on_pedestal_w_kinect.launch"/>     
+  <include file="$(find coordinator)/launch/coord_vision_manip.launch"/>         
+  <node pkg="coordinator" type="acquire_block_client" name="acquire_block_client"  output="screen"/>
+  
+</launch>
